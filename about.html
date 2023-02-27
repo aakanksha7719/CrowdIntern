@@ -1,0 +1,312 @@
+<html>
+<head>
+<style>
+.column {
+  float: left;
+  width: 30%;
+}
+
+.main{
+
+margin-right: 5%;
+margin-left: 10%;
+}
+
+.card{
+     width: 25%;
+     height: 60%;
+     display: inline-block;
+     border-radius: 5px; 
+     margin: 2%;
+     transition: 0.s ease;
+     cursor: pointer; 
+    }
+    .card:hover{
+        transform;: :scale(1,2);
+        box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.title{
+ text-align: center;
+ padding: 3px;
+}
+
+h1{
+ font-size: 16px;
+}
+h1:hover{
+    background-color: yellowgreen;
+    color: crimson;
+}
+
+.des{
+ padding: 2px;
+ text-align: center;
+ padding-top: 5px;
+       border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
+
+button{
+ margin-top: 5px;
+ margin-bottom: 5px;
+ background-color: white;
+ border: 1px solid black;
+ border-radius: 5px;
+ padding:5px;
+}
+
+button:hover{
+ background-color: black;
+ color: white;
+ transition: .5s;
+ cursor: pointer;
+}
+
+
+.bord{
+  border: solid 1px;
+}
+
+li {
+  float: left;
+  margin-left: 30px;
+}
+
+header {  
+
+background-color: rgb(197, 197, 212);  
+position: fixed;  
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 50px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;
+font-family: georgia;
+ font-size:20px;
+ 
+}  
+
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: rgb(20, 20, 20);  
+text-decoration: none; 
+
+}
+
+.intern
+{
+  padding: 10px;
+  background-color: rgb(214, 232, 247);
+  text-align: center;
+  font-size: larger;
+}
+
+.row{
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 18px;
+}
+</style>
+
+</head>
+
+<body style="background-color: rgb(233, 243, 240);">
+<div>
+    <h4>Intern Crowd</h1>  
+      
+        <header> &emsp;
+          <image style="width: 30px; height: 30px;" src="data:image/png;base64,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"></image>&emsp;
+    Intern Crowd 
+            <nav>  
+           <ul>  
+            
+             
+                    <li>  
+                      <a href="">  </a>  
+                      </li> 
+                      <li>  
+                        <a href="">  </a>  
+                        </li> 
+                        <li>  
+                          <a href="">  </a>  
+                          </li> 
+                          <li>  
+                            <a href="">  </a>  
+                            </li> 
+                            <li>  
+                              <a href="">  </a>  
+                              </li> 
+                              <li>  
+                                <a href="">  </a>  
+                                </li> 
+                                <li>  
+                                  
+                                  <a href="">  </a>  
+                                  </li> 
+                                  <li>  
+                                    <a href="">  </a>  
+                                    </li> 
+                                    <li>  
+                                      <a href="">  </a>  
+                                      </li> 
+                                      <li>  
+                                        <a href="">  </a>  
+                                        </li> 
+                                        <li>  
+                                          <a href="">  </a>  
+                                          </li> 
+                                          <li>  
+                                            <a href="">  </a>  
+                                            </li> 
+                                            <li>  
+                                              <a href="">  </a>  
+                                              </li> 
+                                              <li>  
+                                                <a href="">  </a>  
+                                                </li> 
+                                                
+           <li>  
+           <a href="file:///C:/Users/HP/Desktop/InternCrowd/index.html"> |  Home  | </a>  
+           </li> 
+           <li> <a href="file:///C:/Users/HP/Desktop/InternCrowd/internship.html"> | Internships   |</a>  
+           </li>  
+           <li>  
+           <a href="file:///C:/Users/HP/Desktop/InternCrowd/about.html">|  About |</a>  
+           </li>   
+           <li>  
+           <a href="file:///C:/Users/HP/Desktop/InternCrowd/contact.html"> |  Contact  |</a>  
+           </li> 
+           </ul>  
+           </nav> 
+           
+           </header> 
+
+</div>
+<br>
+<div class="intern">
+<p style="font-size: 30px;">About us</p>
+<h4><a href="file:///C:/Users/HP/Desktop/InternCrowd/index.html">Home</a>/About</h4>
+</div>
+
+
+
+
+<div style="padding-top: 3%;">
+<p style="font-size: 20px; padding-left: 10%; padding-right: 10%;"><b>We Have Best Internships For You</b><br><br>
+    &emsp; &emsp;You've Probably Heard About How Programming Shines With New Technology. We Have to Be Aware Of How Programming Can Initiate New Innovations. What's A Better Approach For Our Students Is to Grasp And Adapt To The Technology Around Them.</p>
+
+</div>
+<br>
+
+
+
+
+
+<div class="main">
+    <b><p style="font-size: 25px; padding-left: 10%;">Our team</p>
+    </b>
+
+
+    <div class="card"> 
+      <div class="bord">
+      <div class="title">
+        <center>  <img style="width: 100px; height: 100px;" src="https://interncrowd.in/images/about-icon-11.jpg">
+        </center> 
+         <h1>Anita Patil</h1>
+       
+       <center><h4>Founder</h4></center>
+       
+       <h4>interncrowd@gmail.com</h4>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSfoQmPjzbuoNeaW8BX5vh8nopqJwmpkvviaaNnuPTCzyP7c4Q/alreadyresponded?vc=0&c=0&w=1&flr=0" method="get" target="_blank">
+      <button>Contact</button>
+      </form>
+      </div>
+      </div>
+      </div>
+
+
+      
+    <div class="card"> 
+        <div class="bord">
+        <div class="title">
+          <center>  <img style="width: 100px; height: 100px;" src="https://interncrowd.in/images/about-icon-11.jpg">
+          </center> 
+           <h1>Prachi Patil</h1>
+         
+         <center><h4>CEO</h4></center>
+         
+         <h4>interncrowd@gmail.com</h4>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfoQmPjzbuoNeaW8BX5vh8nopqJwmpkvviaaNnuPTCzyP7c4Q/alreadyresponded?vc=0&c=0&w=1&flr=0" method="get" target="_blank">
+        <button>Contact</button>
+        </form>
+        </div>
+        </div>
+        </div>
+    
+        
+      </div>
+
+<div class="row">
+
+<div class="column" style="padding-right: 15%;">
+<b>Intern Crowd</b><br>
+<p style="text-align: justify;"> &emsp; &emsp;Intern Crowd Is An Online Coding Platform that Offers Specially Programming Courses For Students. 
+  You've Probably Heard About How Programming Shines With New Technology. 
+  We Have To Be Aware Of How Programming Can Initiate New Innovations. What's A Better Approach For Our Students Is 
+  To Grasp And Adapt To The Technology Around Them.
+  </p>
+</div>
+
+<div class="column" style="padding-right: 3%;">
+    <b> &emsp; &emsp;Quick Links</b><br> 
+    
+    <ul>
+      <li>
+        <a src="file:///C:/Users/HP/Desktop/InternCrowd/index.html">home</a>
+      </li><br>
+      <li>
+      <a src="file:///C:/Users/HP/Desktop/InternCrowd/internship.html">internships </a>
+      </li><br>
+      <li>
+        <a src="file:///C:/Users/HP/Desktop/InternCrowd/about.html">about </a>
+      </li><br>
+      <li>
+        <a src="file:///C:/Users/HP/Desktop/InternCrowd/contact.html">contact </a>
+      </li><br>
+     </ul>
+    </div>
+    
+    
+    <div>
+     <b> Useful Links</b><br>
+     <ul>
+      <li>
+        <a>help center</a>
+      </li>
+      <li>
+      <a src="https://docs.google.com/forms/d/e/1FAIpQLScI2TVyKk1UCuMCPNQQ9-yOUwUF39mmWdMPIFTpa4RPnomn7Q/viewform?vc=0&c=0&w=1&flr=0">ask questions </a>
+      </li>
+      <li>
+        <a>send feedback </a>
+      </li>
+     </ul>
+      
+    </div> 
+    
+
+</body>
+</html>
